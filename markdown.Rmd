@@ -2,7 +2,17 @@
 title: "prueba"
 author: "Andrés Estévez Ubierna"
 date: "`r Sys.Date()`"
-output: pdf_document
+linkcolor: blue
+urlcolor: blue
+csl: apa.csl
+
+output:
+  html_document:
+    toc: yes
+    
+     
+  
+
 ---
 
 ```{r setup, include=FALSE}
