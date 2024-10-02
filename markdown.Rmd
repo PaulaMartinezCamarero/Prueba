@@ -1,11 +1,13 @@
 ---
-title: "Probando"
-author: "paula"
+title: "prueba"
+author: "Andrés Estévez Ubierna"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 ---
 
-#importacion de datos
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 ```{r}
 library(readr)
 altas_hospitalarias_ictus <- read_delim("C:/Users/usuario/Desktop/SEMINARIOS_PRUEBAS/Prueba/data/altas_hospitalarias_ictus.csv", 
