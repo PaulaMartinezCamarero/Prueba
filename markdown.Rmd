@@ -17,11 +17,125 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
+---
+title: "Ictus y Factores_Riesgo"
+author: "Andrés Estévez, Paula Martínez"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Índice
+1. [Introducción](#introducción)
+2. [Objetivos](#objetivos)  
+   1. [Relación entre ictus, edad y sexo](#relación-entre-ictus-edad-y-sexo)  
+   2. [Relación entre ictus y sedentarismo](#relación-entre-ictus-y-sedentarismo)  
+   3. [Relación entre ictus y la exposición al humo](#relación-entre-ictus-y-la-exposición-al-humo)  
+   4. [Relación entre ictus y calidad del aire](#relación-entre-ictus-y-calidad-del-aire)  
+3. [Manipulación de datos](#manipulación-de-datos)  
+   1. [Importación de datos](#importación-de-datos)  
+   2. [Responder a las preguntas](#responder-a-las-preguntas)  
+      1. [Ictus, edad y sexo](#ictus-edad-y-sexo)  
+      2. [Ictus y sedentarismo](#ictus-y-sedentarismo)  
+      3. [Ictus y exposición al humo](#ictus-y-exposición-al-humo)  
+      4. [Ictus y calidad del aire](#ictus-y-calidad-del-aire)  
+4. [Conclusiones](#conclusiones)
+
+
+#Introducción
+#Objetivos
+
+#Manipulación de datos
+
+#Importación de datos
+
+#Importamos los datos de las altas hospitalarias por ictus
 ```{r}
 library(readr)
-altas_hospitalarias_ictus <- read_delim("C:/Users/usuario/Desktop/SEMINARIOS_PRUEBAS/Prueba/data/altas_hospitalarias_ictus.csv", 
+alt_hos_ictus <- read_delim("data/altas_hospitalarias_ictus.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
-View(altas_hospitalarias_ictus)
+View(alt_hos_ictus)
 ```
+```{r}
+
+table(alt_hos_ictus$Sexo)
+
+```
+```{r}
+library(dplyr)
+
+resumen <- alt_hos_ictus %>%
+  group_by(Sexo) %>%
+  summarise(
+    media_edad = mean(Edad, na.rm = TRUE),
+    mediana_edad = median(Edad, na.rm = TRUE),
+    total_ingresos = n()
+  )
+
+print(resumen)
+```
+
+
+
+#Importamos los datos de la calidad del aire
+```{r}
+library(readr)
+calidad_aire <- read_csv("INPUT/data/calidad_aire.csv")
+View(calidad_aire)
+```
+
+#Importamos los datos de sedentarismo
+
+```{r} 
+
+library(readr)
+sedentarismo <- read_delim("INPUT/data/sedentarismo.csv", 
+    delim = ";", escape_double = FALSE, na = "No consta", 
+    trim_ws = TRUE)
+View(sedentarismo)
+```
+
+
+#Importamos los datos exposición al humo
+```{r}
+library(readr)
+exposicion_humo <- read_delim("INPUT/data/exposicion_humo.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+View(exposicion_humo)
+```
+
+#Importamos los datos de los centros de desintoxicación
+```{r}
+library(readr)
+centros_servicios_saisde <- read_delim("INPUT/data/centros_servicios_saisde.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+View(centros_servicios_saisde)
+```
+
+
+
+#Importamos función que imprime los habitantes de castilla y león por provincias
+```{r}
+source("INPUT/functions/poblacion_cyl.R")
+
+```
+
+
+
+
+
+
+
+#Ictus, edad y sexo
+
+#Ictus y sedentarismo
+
+#Ictus y exposición al humo
+
+#Ictus y calidad del aire
+
+#Conclusiones
+
+
 
