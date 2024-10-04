@@ -43,13 +43,13 @@ output: html_document
 4. [Conclusiones](#conclusiones)
 
 #Introducción
-En nuestro seminario vamos a estudiar las altas hospitalarias por ictus, en los diferentes hospitales de Castilla y León durante cuatro años, y como estas están relacionadas con distintos factores de riesgo.
+En nuestro seminario vamos a estudiar las altas hospitalarias por ictus, en los diferentes hospitales de Castilla y León durante cuatro años, y como estas, están relacionadas con distintos factores de riesgo.
 
-Lo primero de todo, explicar que, los factor de riesgo son características o circunstancias que atentan contra el equilibrio, contra la salud, y que causan enfermedades o muerte. [senado1999factores]
+Lo primero de todo, explicar que los factor de riesgo son características o circunstancias que atentan contra el equilibrio, contra la salud, y que causan enfermedades o muerte. [senado1999factores]
 
-Durante el desarrollo de nuestro seminario vamos a trabajar con datos de dos factores de riesgo, los cuales son: un estilo de vida sedentario y la exposición al humo. Además vamos a relacionar también el ictus con la calidad del aire.
+Durante el desarrollo de nuestro seminario vamos a trabajar con datos de dos factores de riesgo, los cuales son: un estilo de vida sedentario y la exposición al humo. Además, vamos a relacionar también el ictus con la calidad del aire.
 
-El ser sedentario es un factor de riesgo del ictus ya que "existe una significativa relación inversa entre actividad física y riesgo de ictus..., tanto en varones como en mujeres" [martinez2000factores]
+El ser sedentario es un factor de riesgo del ictus, ya que "existe una significativa relación inversa entre actividad física y riesgo de ictus..., tanto en varones como en mujeres" [martinez2000factores]
 
 Otro factor de riesgo del ictus es la exposición al humo, ya que "los fumaodres pasivos también tienen un mayor riesgo de ictus, puesto que la exposición al humo del cigarrillo aumenta el riesgo de progresión de aterosclerosis." [martinez2000factores]
 
